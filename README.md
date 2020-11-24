@@ -41,11 +41,11 @@ You can find the base layout here 👉 [Figma](https://www.figma.com/proto/UE8zf
 
 ## 🧠 Challenge
 
-[x] Should be able to search movies.
-[x] Should be able do list movies.
-[x] Should be able to choose favorite movies.
-[x] Should be able to remove a favorite movie from the favorite movie list.
-[x] Should be able to list all favorite movies.
+✅ Should be able to search movies.
+✅ Should be able do list movies.
+✅ Should be able to choose favorite movies.
+✅ Should be able to remove a favorite movie from the favorite movie list.
+✅ Should be able to list all favorite movies.
 
 ## :construction_worker: How to execute
 
