@@ -25,7 +25,7 @@
 <br>
 
 <p align="center">
-  <img alt="App" src=".github/app.jpg" width="100%">
+  <img alt="App" src=".github/app.jpg" height="500px">
 </p>
 
 ## 🚀 Required
