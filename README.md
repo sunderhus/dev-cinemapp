@@ -25,7 +25,7 @@
 <br>
 
 <p align="center">
-  <img alt="Sthima" src=".github/Sthima.png" width="100%">
+  <img alt="App" src=".github/app.jpg" width="100%">
 </p>
 
 ## 🚀 Required
