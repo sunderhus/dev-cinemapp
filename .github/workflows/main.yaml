@@ -1,0 +1,36 @@
+name: react-native-android-build-apk
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  configure-setup:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - name: Setup Node.js
+      - uses: actions/setup-node@v2.1.2
+      - with: 
+          node-version: ${{matrix.node-version}}  
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - run: npm install -g yarn
+  build-android:
+    needs: configure-setup
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v2
+      - name: Install  dependencies
+        run: yarn
+      - name: Build Android Release
+        run: cd android && chmod +x ./gradlew && ./gradlew assembleRelease
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: app-release.apk
+          path: android/app/build/outputs/apk/release/
